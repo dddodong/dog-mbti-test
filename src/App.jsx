@@ -318,9 +318,6 @@ function App() {
         case 'twitter':
           shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
           break;
-        case 'facebook':
-          shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-          break;
         case 'naver':
           shareUrl = `https://share.naver.com/web/shareView.nhn?url=${url}&title=${title}`;
           break;
@@ -413,7 +410,7 @@ function App() {
             <button onClick={() => shareOnSns('threads')} className="p-2 bg-black text-white rounded-full shadow-md hover:opacity-90 transition-opacity" title="Threads에 공유">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M13.17,8.25c0-1.29-1.05-2.34-2.34-2.34H5.34C4.05,5.91,3,6.96,3,8.25v2.23c0,0.41,0.34,0.75,0.75,0.75 s0.75-0.34,0.75-0.75V8.25c0-0.41,0.34-0.75,0.75-0.75h5.49c0.41,0,0.75,0.34,0.75,0.75v7.5c0,0.41-0.34,0.75-0.75,0.75h-2.2 c-0.41,0-0.75,0.34-0.75,0.75s0.34,0.75,0.75,0.75h2.2c1.29,0,2.34-1.05,2.34-2.34v-7.5H13.17z M20.25,10.48 c-0.41,0-0.75,0.34-0.75,0.75v4.5c0,0.41-0.34,0.75-0.75,0.75h-5.49c-0.41,0-0.75-0.34-0.75-0.75v-2.23c0-0.41-0.34-0.75-0.75-0.75 s-0.75,0.34-0.75,0.75v2.23c0,1.29,1.05,2.34,2.34,2.34h5.49c1.29,0,2.34-1.05,2.34-2.34v-4.5 C21,10.82,20.66,10.48,20.25,10.48z"/></svg>
             </button>
-            <button onClick={() => shareOnSns('facebook')} className="p-2 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 transition-colors" title="페이스북에 공유"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></button>
+            <button onClick={() => handleManualShare('페이스북')} className="p-2 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 transition-colors" title="페이스북에 공유"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></button>
             <button onClick={() => shareOnSns('twitter')} className="p-2 bg-black text-white rounded-full shadow-md hover:opacity-90 transition-opacity" title="X에 공유"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>
         </div>
 
