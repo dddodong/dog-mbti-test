@@ -4,10 +4,8 @@ import DOMPurify from 'dompurify';
 import { openDB } from 'idb';
 import './App.css';
 
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'; // 이 줄이 있는지 확인하세요.
-import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
