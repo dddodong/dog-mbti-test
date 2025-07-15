@@ -2,6 +2,8 @@ import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import DOMPurify from 'dompurify';
 import { openDB } from 'idb';
+import './App.css';
+
 
 // --- Helper Components ---
 
